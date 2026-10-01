@@ -1,0 +1,30 @@
+{
+  "name": "pour-ledger-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Payments and pour ledger for self-serve coffee stations: Stripe webhooks, idempotent device ingest, reconciliation of unknown pours.",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node scripts/migrate.js",
+    "test": "jest",
+    "test:local": "node scripts/test-local.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "drizzle-orm": "^0.45.3",
+    "express": "^5.2.1",
+    "pg": "^8.23.1",
+    "stripe": "^23.0.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.11",
+    "embedded-postgres": "^16.14.0-beta.17",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.0"
+  }
+}
